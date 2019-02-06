@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
 * {
   box-sizing: border-box;
+  
 
 }
 .results {
-  margin-top: 4rem;
-  background: white;
+  
+
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;

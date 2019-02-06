@@ -28,7 +28,7 @@ class NavBar extends Component {
       <div className="menu-container">
         <div className="menu">
         
-          <div className="menu__name">Date Advisor</div>
+          <div className="menu__name"><NavLink to='/' exact className='link'>Date Advisor</NavLink></div>
           <ul className='links'>
             <li className='signup'><NavLink to='/signup' exact className='link'>Sign Up</NavLink></li>     
             <li className='login'><NavLink to='/login' exact className='link'>Login</NavLink></li>        

@@ -32,13 +32,7 @@ class Explore extends Component {
         <div className="cards">
           <Card/>
         </div>
-        
-       
-        <div className = "results">
-        
-
-        
-        </div>
+      
       </div>
     );
     
