@@ -1,27 +1,34 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
-
+.wrap{
+	height: 100vh;
+	width: 100vw;
+}
 .form{
+  
 	margin: 0;
 	padding: 0;
 	background: #fff;
 
 	color: #fff;
 	font-family: Arial;
-	font-size: 12px;
+	font-size: 18px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .body_login{
 	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-	bottom: -40px;
-	width: auto;
-  height: auto;
-  background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+	top: -0px;
+	left: -0px;
+	right: -0px;
+	bottom: -30px;
+	width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(224, 105, 105, 0.5),rgba(226, 139, 117, 0.692)), url('https://www.cheapcaribbean.com/content/dam/CR_GUA_Main1_Beach_Cropped.jpg');
+  /*background-image: url(https://www.cheapcaribbean.com/content/dam/CR_GUA_Main1_Beach_Cropped.jpg);*/
 	background-size: cover;
-	-webkit-filter: blur(4px);
+	
 	z-index: 0;
 }
 
@@ -31,9 +38,8 @@
 	left: -20px;
 	right: -40px;
 	bottom: -40px;
-	width: auto;
-  height: auto;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	width: 100%;
+  height: 100%;
 	z-index: 1;
 	opacity: 0.7;
 }
@@ -49,7 +55,7 @@
 	float: left;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
-	font-size: 35px;
+	font-size: 2.18rem;
   font-weight: 300;
   
 }
@@ -62,49 +68,40 @@
 	position: absolute;
 	top: calc(50% - 75px);
 	left: calc(50% - 50px);
-	height: 150px;
-	width: 350px;
-	padding: 10px;
+	height: 9.37rem;
+	width: 21.87rem;
+	padding: 0.62rem;
 	z-index: 2;
 }
 
-.login_form input[type=text]{
-	width: 250px;
-	height: 30px;
+.login_form input[type=text], .login_form input[type=password]{
+	width: 15.62rem;
+	height: 1.87rem;
 	background: transparent;
 	border: 1px solid rgb(255, 255, 255);
 	border-radius: 2px;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
 	padding: 4px;
 }
 
 .login_form input[type=password]{
-	width: 250px;
-	height: 30px;
-	background: transparent;
-	border: 1px solid rgb(255, 255, 255);
-	border-radius: 2px;
-	color: #fff;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 4px;
-	margin-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .login_form input[type=button]{
-	width: 260px;
-	height: 35px;
+	width: 15.62rem;
+	height: 2.18rem;
   background: #e94343;
 	border: 1px solid #fff;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #ffffff;
 	font-family: 'Exo', sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;

@@ -3,6 +3,13 @@ ul{
 }
 
 .cards{
-  margin-top: 8rem;
+  padding-top:5rem ;
+  height: 100%;
+    /* Background styles */
+background-image: linear-gradient(rgba(224, 105, 105, 0.5),rgba(226, 139, 117, 0.692)), url('../../images/costaricamap2.jpg');
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 
