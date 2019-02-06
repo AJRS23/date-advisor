@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  font-family: sans-serif;
+
+}
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Text styles */
+  text-align: center;
+  color: white;
+  
+  /* Background styles */
+  background-image: linear-gradient(rgba(224, 105, 105, 0.5),rgba(226, 139, 117, 0.692)), url('../../images/costaricamap.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero h1 {
+  /* Text styles */
+  font-size: 5em;
+  
+  /* Margins */
+  margin-top: 0;
+  margin-bottom: 0.5em;
+
+  font-weight: 300;
+}
+
+.hero h2{
+  font-weight: 300;
+}
+
+.hero .btnSearch {
+  /* Positioning and sizing */
+  display: block;
+  width: 200px;
+  
+  /* Padding and margins */
+  padding: 1em;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Text styles */
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  
+  /* Border styles */
+  border: 3px solid white;
+  border-radius: 20px;
+  
+  /* Background styles */
+  background-color: rgba(112, 219, 139, 0.8);
+}
+
+@media screen and (max-width: 992px) {
+  .hero h1 {
+    /* Text styles */
+    font-size: 4em;
+    
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  
+    font-weight: 300;
+  }
+  .hero h2{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  
+}
+
+@media screen and (max-width: 767px) {
+  .hero h1 {
+    /* Text styles */
+    font-size: 4em;
+    
+    /* Margins */
+    margin-top: 2rem;
+    margin-bottom: 0.5em;
+  
+    font-weight: 300;
+  }
+  .hero h2{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  
+  
+
+}

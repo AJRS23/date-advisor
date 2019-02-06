@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.menu-container {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  color: #fff;
+  background-color: #e94343;  /* Blue */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;    /* Add this */
+  z-index: 100000;
+}
+
+.menu {
+  /* border: 1px solid #fff; */
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.menu__name{
+  font-size: 1.5rem;
+}
+
+.links {
+  /* border: 1px solid #fff;   For debugging */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+ul{
+  list-style: none;
+}
+:link {
+  text-decoration: none;
+  transition: color .3s ease;
+
+}
+:link, :visited {
+  color:white;
+  text-decoration: none;
+  font-size: 1.12rem;
+}
+.links :hover {
+  color: wheat;
+}
