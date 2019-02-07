@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './card.css';
 import {NavLink,withRouter} from 'react-router-dom';
 import NavBar from '../nav-bar/nav-bar';
+import Actions from '../../redux/actions/actions';
 
 
 
@@ -11,82 +12,70 @@ import NavBar from '../nav-bar/nav-bar';
 class Card extends Component {
   constructor(props) {
     super(props);
+    this.likeSelected = this.likeSelected.bind(this);
+    
+    //this.visitSelected = this.visitSelected.bind(this);
 
   }
 
-  handleSelected() {
+  likeSelected(index) {
     
-    
-    localStorage.clear();
-    //this.props.onLogout();
-    //this.props.history.push('/');
+    this.props.onSetLike(index);
+    this.props.history.push('/explore');
   }
 
   render() {
+    const { card } = this.props;
+    let class_btn = 'btn_like';
+    
+    console.log(this.props.user);
+    if(this.props.user.likedPlaces.find(cat => cat === card.id)){
+      console.log(card.id);
+      class_btn += ' active';
+    }
+    
     
     return (
-      
       <div className="results">
-        
         <div className="result_card" id="bright">
           <div className="info_section">
             <div className="result_header">
-              <img className="result_photo" src="https://file.videopolis.com/D/9dc9f4ba-0b2d-4cbb-979f-fee7be8a4198/8485.11521.brussels.the-hotel-brussels.amenity.restaurant-AD3WAP2L-13000-853x480.jpeg"/>
-              <h1>Name</h1>
-              <h4>Location</h4>
-              <span className="hour">0:00 - 0:00</span>
+              <img className="result_photo" src={card.URL}/>
+              <h1>{card.name}</h1>
+              <h4>{card.location.formattedAddress}</h4>
+              <p className="type"><b>Phone:  </b></p>
+              <p className="type"> { card.phone}</p>
               <br/>
-              <p className="type">Phone</p>
+              <span className="hour">{card.openningHour} - {card.clossingHour}</span>
+              
             </div>
             <div className="result_desc">
               <p className="text">
-              Description...
-        
+                {card.description}
               </p>
-              <p className="text">
-              Likes count: 
+              <p className="text counts">
+                <b>Visits:</b> {card.visitsCount}
               </p>
+              <p >
+                <b>Likes:</b> {card.likesCount} 
+              </p>
+ 
             </div>
             <div className="result_social">
               <ul>
-                <li><i className="material-icons">share</i></li>
-                <li><i className="material-icons"></i></li>
-                <li><i className="material-icons">chat_bubble</i></li>
+                <li>
+                  <button className={class_btn} onClick={() => { this.visitSelected(this.props.ind); }}><i className="material-icons">person</i></button>
+                </li>
+                <li>
+                  <button className={class_btn} onClick={() => { this.likeSelected(this.props.ind); }}><i className="material-icons"></i></button>
+                </li>
               </ul>
             </div>
           </div>
-          <div className="blur_back bright_back"></div>
-        </div>
-        <div className="result_card" id="bright">
-          <div className="info_section">
-            <div className="result_header">
-              <img className="result_photo" src="https://file.videopolis.com/D/9dc9f4ba-0b2d-4cbb-979f-fee7be8a4198/8485.11521.brussels.the-hotel-brussels.amenity.restaurant-AD3WAP2L-13000-853x480.jpeg"/>
-              <h1>Name</h1>
-              <h4>Location</h4>
-              <span className="hour">0:00 - 0:00</span>
-              <p className="type">Phone</p>
-            </div>
-            <div className="result_desc">
-              <p className="text">
-              Description...
-        
-              </p>
-              <p className="text">
-              Likes count: 
-              </p>
-            </div>
-            <div className="result_social">
-              <ul>
-                <li><i className="material-icons">share</i></li>
-                <li><i className="material-icons"></i></li>
-                <li><i className="material-icons">chat_bubble</i></li>
-              </ul>
-            </div>
+          <div className="blur_back" style={{backgroundImage: 'url(' + card.URL + ')'}}>
           </div>
-          <div className="blur_back bright_back"></div>
+          
         </div>
-
-        
       </div>
     );
     
@@ -94,14 +83,16 @@ class Card extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    customer: state.customer,
+    user: state.user,
+
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onLogout: () => {
-      dispatch({ type: 'LOGOUT_USER' });
+    onSetLike: (index) => {
+      dispatch({ type: Actions.SET_LIKE, index });
+    
     }
   };
 };

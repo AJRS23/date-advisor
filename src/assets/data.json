@@ -1,0 +1,219 @@
+{
+  "places": [
+    {
+      "id": "1",
+      "name": "Waterfall Garden",
+      "phone": "(506) 2521-1244",
+      "URL": "https://costaricaexperts.com/wp-content/uploads/2015/06/Classic-Costa-Rica-Luxury-Vacation-Package-1-1.jpg",
+      "openningHour": "8:00",
+      "clossingHour": "17:00",
+      "description": "La Paz Waterfall Gardens is the most visited private ecological attraction # 1 in Costa Rica that offers you the best trails, the most famous waterfalls in Costa Rica, an animal sanctuary and private reserve of wildlife ",
+      "location": {
+        "country": "Costa Rica",
+        "province": "Heredia",
+        "city": "",
+        "postalCode": "",
+        "formattedAddress": "126, Heredia Province"
+      },
+      "categories": [
+        "Outdoors"
+      ],
+      "filters": [
+        "Morning",
+        "High-Price"
+      ],
+      "keywords": [
+        "Volcan Poas",
+        "Waterfall",
+        "Garden"
+      ],
+      "visitsCount": 10,
+      "likesCount": 100,
+      "rating": 8.5,
+      "comments": [
+        {
+          "user": "",
+          "message": "",
+          "date": ""
+        }
+      ],
+      "like": false
+    },
+    {
+      "id": "2",
+      "name": "Mini Golf",
+      "phone": "(506)  2282-0522",
+      "URL": "https://pbs.twimg.com/profile_images/458359863479775232/H2VmhKw1.png",
+      "openningHour": "8:00",
+      "clossingHour": "17:00",
+      "description": "La Paz Waterfall Gardens is the most visited private ecological attraction # 1 in Costa Rica that offers you the best trails, the most famous waterfalls in Costa Rica, an animal sanctuary and private reserve of wildlife ",
+      "location": {
+        "country": "Costa Rica",
+        "province": "San Jose",
+        "city": "Santa Ana",
+        "postalCode": "10903",
+        "formattedAddress": "Radial Santa Ana - Belen, Pozos, 10903"
+      },
+      "categories": [
+        "Outdoors",
+        "Entertainment"
+      ],
+      "filters": [
+        "Morning",
+        "High-Price"
+      ],
+      "keywords": [
+        "Golf"
+      ],
+      "visitsCount": 50,
+      "likesCount": 200,
+      "rating": 9.0,
+      "comments": [
+        {
+          "user": "",
+          "message": "",
+          "date": ""
+        }
+      ],
+      "like": false
+    },
+    {
+      "id": "3",
+      "name": "Teatro El Triciclo",
+      "phone": "(506) 2222 2624",
+      "URL": "https://www.teatroeltriciclo.com/Downloads/Triciclo/Amarillo.png",
+      "openningHour": "1:00",
+      "clossingHour": "22:00",
+      "description": "La Paz Waterfall Gardens is the most visited private ecological attraction # 1 in Costa Rica that offers you the best trails, the most famous waterfalls in Costa Rica, an animal sanctuary and private reserve of wildlife ",
+      "location": {
+        "country": "Costa Rica",
+        "province": "San Jose",
+        "city": "Escazu",
+        "postalCode": "10903",
+        "formattedAddress": "Calle 15, San José"
+      },
+      "categories": [
+        "Indoors",
+        "Entertainment"
+      ],
+      "filters": [
+        "Night",
+        "Medium-Price"
+      ],
+      "keywords": [
+        "Theater",
+        "Dark"
+      ],
+      "visitsCount": 5,
+      "likesCount": 20,
+      "rating": 7.0,
+      "comments": [
+        {
+          "user": "",
+          "message": "",
+          "date": ""
+        }
+      ],
+      "like": false
+    },
+    {
+      "id": "4",
+      "name": "Boliche Dent",
+      "phone": "(506) 2253-5745",
+      "URL": "http://conozcasucanton.com/wp-content/uploads/sites/11/2017/01/Boliche-Dent-1.jpg",
+      "openningHour": "11:00",
+      "clossingHour": "23:55",
+      "description": "La Paz Waterfall Gardens is the most visited private ecological attraction # 1 in Costa Rica that offers you the best trails, the most famous waterfalls in Costa Rica, an animal sanctuary and private reserve of wildlife ",
+      "location": {
+        "country": "Costa Rica",
+        "province": "San Jose",
+        "city": "San Pedro",
+        "postalCode": "10903",
+        "formattedAddress": "Barrio Dent, San Pedro, San Jose"
+      },
+      "categories": [
+        "Indoors",
+        "Entertainment"
+      ],
+      "filters": [
+        "Night",
+        "Medium-Price"
+      ],
+      "keywords": [
+        "Bowling",
+        "Fun",
+        "Play"
+      ],
+      "visitsCount": 5,
+      "likesCount": 20,
+      "rating": 7.0,
+      "comments": [
+        {
+          "user": "",
+          "message": "",
+          "date": ""
+        }
+      ],
+      "like": false
+    },
+    {
+      "id": "5",
+      "name": "El Pizote",
+      "phone": "(506) 2278 6236",
+      "URL": "https://fastly.4sqi.net/img/general/600x600/_CdheMpDVwGvP9bWyqqunuvhs-SJdBA-UmtRbWq2RDQ.jpg",
+      "openningHour": "11:00",
+      "clossingHour": "23:55",
+      "description": " ",
+      "location": {
+        "country": "Costa Rica",
+        "province": "San Jose",
+        "city": "Tres Rios",
+        "postalCode": "10903",
+        "formattedAddress": "San Ramon, Tres Rios"
+      },
+      "categories": [
+        "Indoors",
+        "Food"
+      ],
+      "filters": [
+        "Night",
+        "Low-Price"
+      ],
+      "keywords": [
+        "Restaurant",
+        "Pork"
+      ],
+      "visitsCount": 10,
+      "likesCount": 30,
+      "rating": 8.5,
+      "comments": [
+        {
+          "user": "",
+          "message": "",
+          "date": ""
+        }
+      ],
+      "like": false
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Alvaro",
+      "lastName": "Ramirez",
+      "email": "alvaro.ramirez.seg@gmail.com",
+      "photo": "",
+      "likedPlaces": [
+        "1",
+        "4"
+      ],
+      "location": {
+        "country": "Costa Rica",
+        "province": "San Jose",
+        "city": "El Carmen",
+        "postalCode": "",
+        "formattedAddres": "Carmen de Guadalupe, Costa Rica"
+      }
+    }
+  ]
+}

@@ -5,31 +5,35 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './search-form.css';
 import {withRouter} from 'react-router-dom';
+import Actions from '../../redux/actions/actions';
 
 
 class SearchForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { username: '',password:'' };
+    this.state = { category: '',country:'' };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.passwordChange = this.passwordChange.bind(this);
+    this.categoryChange = this.categoryChange.bind(this);
+    this.countryChange = this.countryChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
-  handleChange(event) {
-    this.setState({ username: event.target.value });
+  categoryChange(event) {
+    this.setState({ category: event.target.value });
   }
 
-  passwordChange(event) {
-    this.setState({ password: event.target.value });
+  countryChange(event) {
+    this.setState({ country: event.target.value });
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log('Entro aqui');
+    console.log(this.state.category);
+    console.log(this.state.country);
+
+    this.props.onGetSearchPlaces(this.state.category,this.state.country);
     this.props.history.push('/explore');
     /*
     console.log(this.state.username + this.state.password) ;
@@ -68,10 +72,10 @@ class SearchForm extends Component {
           <div className="inner-form">
             <div className="input-field first-wrap">
               
-              <input id="search" type="text" placeholder="ex: food, outdoors, events... " value={this.state.username} onChange={this.handleChange}/>
+              <input id="search" type="text" placeholder="ex: food, outdoors, events... " value={this.state.category} onChange={this.categoryChange}/>
             </div>
             <div className="input-field second-wrap">
-              <input id="location" type="text" placeholder="Location" />
+              <input id="location" type="text" placeholder="Location" value={this.state.country} onChange={this.countryChange} />
             </div>
             <div className="input-field third-wrap">
               <input type="submit" value="Search" className="btn-search"/>
@@ -90,8 +94,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onLogin: () => {
-      dispatch({ type: 'LOGIN'});
+    onGetSearchPlaces: (category,country) => {
+      console.log(category);
+      dispatch({ type: Actions.GET_SEARCH, payload: {category: category, location: country}});
     }
   };
 };
