@@ -50,10 +50,11 @@
 .result_card .info_section .result_header h4 {
   color: #555;
   font-weight: 400;
+  max-height: 50px;
 }
 .result_card .info_section .result_header .hour {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 13px;
   color: #555;
   padding: 5px;
   border-radius: 5px;
@@ -62,26 +63,36 @@
 .result_card .info_section .result_header .type {
   display: inline-block;
   color: #959595;
-  margin-left: 10px;
+  
+  margin-top: 10px;
 }
 .result_card .info_section .result_header .result_photo {
   position: relative;
   float: left;
   margin-right: 20px;
   height: 120px;
+  width: 170px;
   box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
 }
 .result_card .info_section .result_desc {
   padding: 25px;
+  
   height: 50%;
 }
 .result_card .info_section .result_desc .text {
   color: #545454;
 }
+
+.counts{
+  margin-top: 0.6rem;
+}
+
 .result_card .info_section .result_social {
   height: 10%;
   padding-left: 15px;
   padding-bottom: 20px;
+  
 }
 .result_card .info_section .result_social ul {
   list-style: none;
@@ -94,11 +105,16 @@
   transition-delay: 0.15s;
   margin: 0 10px;
 }
-.result_card .info_section .result_social ul li:hover {
+.result_card .info_section .result_social ul li .btn_like {
+  color: rgba(0, 0, 0, 0.3);
+  background: none;
+  border: none;
+}
+.result_card .info_section .result_social ul li .btn_like:hover {
   transition: color 0.3s;
   color: rgba(0, 0, 0, 0.7);
 }
-.result_card .info_section .result_social ul li i {
+.result_card .info_section .result_social ul li .btn_like i {
   font-size: 19px;
   cursor: pointer;
 }
@@ -149,12 +165,10 @@
     display: inline-grid;
   }
 }
-.bright_back {
-  background: url("https://file.videopolis.com/D/9dc9f4ba-0b2d-4cbb-979f-fee7be8a4198/8485.11521.brussels.the-hotel-brussels.amenity.restaurant-AD3WAP2L-13000-853x480.jpeg");
-}
-.tomb_back {
-  background: url("https://fsmedia.imgix.net/cd/c9/5e/ba/4817/4d9a/93f0/c776ec32ecbc/lara-crofts-neck-looks-unnatural-in-the-new-poster-for-tomb-raider.png");
-}
-.ave_back {
-  background: url("https://www.gannett-cdn.com/-mm-/c03fd140debe8ad4c05cf81a5cad7ad61a12ce52/c=0-1580-2985-3266&r=x803&c=1600x800/local/-/media/2017/06/09/USATODAY/USATODAY/636326272873599176-Black-Panther-Teaser.jpg");
+
+
+.btn_like:focus {outline:0;}
+.result_card .info_section .result_social ul li .btn_like.active {
+  color: #e94343; ;
+  
 }

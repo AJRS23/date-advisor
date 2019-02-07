@@ -5,11 +5,13 @@ import './explore.css';
 import {NavLink,withRouter} from 'react-router-dom';
 import NavBar from '../nav-bar/nav-bar';
 import Card from '../card/card';
+import Filter from '../filter/filter';
 
 
 class Explore extends Component {
   constructor(props) {
     super(props);
+    
 
   }
 
@@ -20,6 +22,11 @@ class Explore extends Component {
     //this.props.onLogout();
     //this.props.history.push('/');
   }
+  reset = () => {
+
+  };
+  
+  
 
   render() {
     
@@ -30,15 +37,17 @@ class Explore extends Component {
         </div>
         <div className="explore-body">
           <div className="filters-container">
-            <h5>Filters: </h5>
-            <button className="btn active" > Show all</button>
-            <button className="btn" > Morning</button>
-            <button className="btn" > Night</button>
-            <button className="btn" > Low-price</button>
-            <button className="btn" > Medium-price</button>
+          
+            {this.props.listFilters.map(fil => <Filter key={fil.name} filter={fil}
+              ind={this.props.listFilters.indexOf(fil)}  />)}
+            
+            
+            
           </div>
           <div className="cards">
-            <Card/>
+            {this.props.showPlaces.map(card => <Card key={card.id} id={card.id}
+              ind={this.props.showPlaces.indexOf(card)} card={card} />)}
+           
           </div>
         </div>
       
@@ -50,6 +59,9 @@ class Explore extends Component {
 const mapStateToProps = (state) => {
   return {
     customer: state.customer,
+    searchPlaces: state.searchPlaces,
+    listFilters: state.listFilters,
+    showPlaces: state.showPlaces
   };
 };
 
@@ -64,7 +76,9 @@ const mapDispatchToProps = (dispatch) => {
 Explore.propTypes = {
   userLogin: PropTypes.string,
   history: PropTypes.object,
-  customer: PropTypes.string
+  customer: PropTypes.string,
+  searchPlaces: PropTypes.array
+  
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Explore));

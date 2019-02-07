@@ -1,27 +1,26 @@
 import Actions from '../actions/actions';
+import data from '../../assets/data.json';
 
 const INITIAL_STATE = {
   isLoggedIn: false,
-  customer: '',
-  user: '',
-  books: []
+  user:data.users[0],
+  showPlaces:data.places,
+  searchedPlaces: [],
+  listPlaces: data.places,
+
+  selectedIndexFilter: 0,
+  listFilters: [
+    {name: 'Show all',active: true}, {name:'Saved',active:false},
+    {name:'Morning',active:false}, {name:'Night',active:false}, 
+    {name:'Low-Price',active:false}, {name:'Medium-Price',active:false},
+    {name:'High-Price',active:false}],
+    
 };
 
-function getTokenFromLocal() {
-  return localStorage.getItem('token') || '';
-}
 
-function saveTokenToLocal(token) {
-  localStorage.setItem('token', token);
-  localStorage.setItem('token-time', new Date().getTime());
-}
-
-function removeTokenFromLocal() {
-  localStorage.removeItem('token');
-}
-
-const BookReducer = (state = INITIAL_STATE, action) => {
-  let bookIndex, newBooks;
+const PlaceReducer = (state = INITIAL_STATE, action) => {
+  
+  let placeIndex, newPlace, newFilter, newUser;
   switch (action.type) {
 
   case Actions.SET_LOGGED_IN:
@@ -37,7 +36,7 @@ const BookReducer = (state = INITIAL_STATE, action) => {
     );
 
   case Actions.LOGIN:
-    saveTokenToLocal(action.payload.token);
+    
     return Object.assign(
       {},
       state,
@@ -50,7 +49,7 @@ const BookReducer = (state = INITIAL_STATE, action) => {
     );
 
   case Actions.LOGOUT: 
-    removeTokenFromLocal();
+    
     return Object.assign(
       {},
       state,
@@ -81,32 +80,72 @@ const BookReducer = (state = INITIAL_STATE, action) => {
         books: [...state.books, action.book]
       }
     );
+  case Actions.GET_SEARCH:
+    newPlace = [];
+    if(action.payload.city === undefined && action.payload.location ===''){
+      newPlace = state.listPlaces;
+    }
+    else{
+      state.listPlaces.forEach(p => {
+      
+        if(p.categories.find(cat => cat === action.payload.category) || p.location.city === action.payload.location || p.location.province === action.payload.location){
+          newPlace.push(p);
+        }
+      });
+    }
+    
+    return {
+      ...state,
+      searchedPlaces: newPlace,
+      showPlaces: newPlace
+    };
 
-  case Actions.DELETE_BOOK:
-    bookIndex = state.books.findIndex(book => book.id === action.bookId);
-    newBooks = state.books;
-    newBooks.splice(bookIndex, 1);
-    return Object.assign(
-      {},
-      state,
-      {
-        ...state,
-        books: [...newBooks]
-      }
-    );
+  case Actions.SET_FILTER:
+    newPlace = [];
+    newFilter = state.listFilters;
 
-  case Actions.UPDATE_BOOK:
-    bookIndex = state.books.findIndex(book => book.id === action.payload.bookId);
-    newBooks = state.books;
-    newBooks[bookIndex] = action.payload.book;
-    return Object.assign(
-      {},
-      state,
-      {
-        ...state,
-        books: [...newBooks]
-      }
-    );
+    if(action.index===0){
+      newPlace = state.searchedPlaces;
+    }
+    else if(action.index===1){
+      state.listPlaces.forEach(p => {
+        if(state.user.likedPlaces.find(lik => lik === p.id)){
+          newPlace.push(p);
+        }
+      });
+    }
+    else{
+      state.searchedPlaces.forEach(p => {
+      
+        if(p.filters.find(cat => cat === state.listFilters[action.index].name)){
+        
+          newPlace.push(p);
+        }
+      });
+    }
+    newFilter[action.index].active = true;
+    newFilter[state.selectedIndexFilter].active = false;
+    return {
+      ...state,
+      showPlaces: newPlace,
+      selectedIndexFilter: action.index,
+      listFilters: newFilter
+    };
+
+  case Actions.SET_LIKE:
+    newUser = state.user;
+    newPlace = state.showPlaces;
+
+    newUser.likedPlaces.push(state.showPlaces[action.index].id);
+    newPlace[action.index].likesCount++;
+    
+    return {
+      ...state,
+      user:newUser,
+      showPlaces: newPlace
+      
+    };
+  
 
   default:
     return Object.assign(
@@ -114,10 +153,10 @@ const BookReducer = (state = INITIAL_STATE, action) => {
       state,
       {
         ...state,
-        isLoggedIn: getTokenFromLocal() !== ''
+        //isLoggedIn: getTokenFromLocal() !== ''
       }
     );
   }
 };
 
-export default BookReducer;
+export default PlaceReducer;
