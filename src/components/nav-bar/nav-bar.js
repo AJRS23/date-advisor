@@ -19,15 +19,14 @@ class NavBar extends Component {
     if(this.props.user.id!==''){
       return (
         <ul className='links'>
-          <li className='signup name'>{this.props.user.firstName}</li>
+          <li className='signup name'>{this.props.user.username}</li>
           <li className='login'><button className= "buton_logout" onClick={() => { this.handleSelected(); }}>Logout</button></li>        
         </ul>
       );
     }
     else{
       return(
-        <ul className='links'>
-          <li className='signup'><NavLink to='/signup' exact className='link'>Sign Up</NavLink></li>     
+        <ul className='links'>     
           <li className='login'><NavLink to='/login' exact className='link'>Login</NavLink></li>        
         </ul>
       );

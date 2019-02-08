@@ -174,7 +174,7 @@
       "phone": "(506) 2278 6236",
       "URL": "https://fastly.4sqi.net/img/general/600x600/_CdheMpDVwGvP9bWyqqunuvhs-SJdBA-UmtRbWq2RDQ.jpg",
       "link": "https://m.facebook.com/Chicharronera-El-Pizote-252573068088356/photos/",
-      "openningHour": "11:00",
+      "openningHour": "18:00",
       "clossingHour": "23:55",
       "description": "Here you can eat the best pork rinds with a great view in our viewpoint. You can not miss it! We have a variety of national food and at a good price.",
       "location": {
@@ -200,6 +200,50 @@
       ],
       "visitsCount": 10,
       "likesCount": 30,
+      "rating": 8.5,
+      "comments": [
+        {
+          "user": "",
+          "message": "",
+          "date": ""
+        }
+      ],
+      "like": false
+    },
+    {
+      "id": "6",
+      "name": "Jazz Cafe",
+      "phone": "(506) 2253 8933",
+      "URL": "http://i68.tinypic.com/idx9n9.jpg",
+      "link": "https://www.jazzcafecostarica.com/website/",
+      "openningHour": "11:00",
+      "clossingHour": "00:00",
+      "description": "The constant participation of renowned international artists has made us part of the international jazz circuit. Jazz, blues, R & B and Latin American folk music are the most usual.",
+      "location": {
+        "country": "Costa Rica",
+        "province": "San Jose",
+        "city": "San Pedro",
+        "postalCode": "10903",
+        "formattedAddress": "Banco Popular, San Pedro",
+        "lat": "9.932270",
+        "lon": "-84.049335"
+      },
+      "categories": [
+        "Indoors",
+        "Food",
+        "Entertainment"
+      ],
+      "filters": [
+        "Night",
+        "High-Price",
+        "Morning"
+      ],
+      "keywords": [
+        "Restaurant",
+        "Pork"
+      ],
+      "visitsCount": 1000,
+      "likesCount": 37,
       "rating": 8.5,
       "comments": [
         {
