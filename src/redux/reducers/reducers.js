@@ -57,7 +57,7 @@ const PlaceReducer = (state = INITIAL_STATE, action) => {
     else{
       state.listPlaces.forEach(p => {
         //Get places according to paramters
-        if(p.categories.find(cat => cat === action.payload.category) || p.location.city === action.payload.location || p.location.province === action.payload.location){
+        if(p.categories.find(cat => cat === action.payload.category) && (p.location.city === action.payload.location || p.location.province === action.payload.location)){
           newPlace.push(p);
         }
       });
