@@ -1,19 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
 * {
   box-sizing: border-box;
-  
-
 }
-.results {
-  
 
+.results {
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
-
+/*Total card*/
 .result_card {
-  
   position: relative;
   display: block;
   width: 800px;
@@ -23,13 +19,14 @@
   border-radius: 10px;
   transition: all 0.4s;
   box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 .result_card:hover {
   transform: scale(1.02);
   box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
   transition: all 0.4s;
 }
+/*Card info*/
 .result_card .info_section {
   position: relative;
   width: 100%;
@@ -38,6 +35,7 @@
   z-index: 2;
   border-radius: 10px;
 }
+/*Card header*/
 .result_card .info_section .result_header {
   position: relative;
   padding: 25px;
@@ -63,9 +61,9 @@
 .result_card .info_section .result_header .type {
   display: inline-block;
   color: #959595;
-  
   margin-top: 10px;
 }
+/*Card photos*/
 .result_card .info_section .result_header .result_photo {
   position: relative;
   float: left;
@@ -77,22 +75,19 @@
 }
 .result_card .info_section .result_desc {
   padding: 25px;
-  
   height: 50%;
 }
 .result_card .info_section .result_desc .text {
   color: #545454;
 }
-
 .counts{
   margin-top: 0.6rem;
 }
-
+/*Card social*/
 .result_card .info_section .result_social {
   height: 10%;
   padding-left: 15px;
   padding-bottom: 20px;
-  
 }
 .result_card .info_section .result_social ul {
   list-style: none;
@@ -105,19 +100,21 @@
   transition-delay: 0.15s;
   margin: 0 10px;
 }
-.result_card .info_section .result_social ul li .btn_like {
+/*Card buttons*/
+.result_card .info_section .result_social ul li .btn_like_visit {
   color: rgba(0, 0, 0, 0.3);
   background: none;
   border: none;
 }
-.result_card .info_section .result_social ul li .btn_like:hover {
+.result_card .info_section .result_social ul li .btn_like_visit:hover {
   transition: color 0.3s;
   color: rgba(0, 0, 0, 0.7);
 }
-.result_card .info_section .result_social ul li .btn_like i {
+.result_card .info_section .result_social ul li .btn_like_visit i {
   font-size: 19px;
   cursor: pointer;
 }
+/*Blur background photo*/
 .result_card .blur_back {
   position: absolute;
   top: 0;
@@ -127,6 +124,17 @@
   background-size: cover;
   border-radius: 11px;
 }
+/*Button change colors*/
+.btn_like_visit:focus {outline:0;}
+.result_card .info_section .result_social ul li .btn_like_visit.active {
+  color: #e94343; ;
+}
+.btn_like:focus {outline:0;}
+.result_card .info_section .result_social ul li .btn_like_visit.active_visit {
+  color: #4391e9; ;
+}
+
+
 @media screen and (min-width: 768px) {
   .result_header {
     width: 65%;
@@ -155,8 +163,14 @@
   }
   .result_header {
     width: 100%;
-    margin-top: 85px;
+    margin-top: 5px;
+    text-align: center;
   }
+  .result_card .info_section .result_header .result_photo {
+    float: none;
+    margin:auto; 
+    
+}
   .result_desc {
     width: 100%;
   }
@@ -167,8 +181,4 @@
 }
 
 
-.btn_like:focus {outline:0;}
-.result_card .info_section .result_social ul li .btn_like.active {
-  color: #e94343; ;
-  
-}
+

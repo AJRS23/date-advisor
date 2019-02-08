@@ -1,38 +1,32 @@
-.s01 {
+.bodyForm {
   margin-top: 4rem;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: center;
+  align-items: center;
   font-family: 'Poppins', sans-serif;
   
   padding: 15px;
 }
-.s01 form {
+.bodyForm form {
   width: 100%;
   max-width: 1290px;
 }
 
-.s01 form .inner-form {
+.bodyForm form .inner-form {
   background: rgba(0, 0, 0, 0.5);
   padding: 20px 25px;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.s01 form .inner-form .input-field {
+.bodyForm form .inner-form .input-field {
   margin-right: 30px;
   height: 55px;
 }
 
-.s01 form .inner-form .input-field input {
+.bodyForm form .inner-form .input-field input {
   height: 100%;
   background: #fff;
   border-radius: .5px;
@@ -43,45 +37,44 @@
   font-size: 20px;
 }
 
-.s01 form .inner-form .input-field input.placeholder {
+.bodyForm form .inner-form .input-field input.placeholder {
   color: #9a9a9a;
   font-size: 19px;
 }
 
-.s01 form .inner-form .input-field input:-moz-placeholder {
+.bodyForm form .inner-form .input-field input::-webkit-input-placeholder {
   color: #9a9a9a;
   font-size: 19px;
 }
 
-.s01 form .inner-form .input-field input::-webkit-input-placeholder {
-  color: #9a9a9a;
-  font-size: 19px;
+.bodyForm form .inner-form .input-field input:hover,{
+  box-shadow: none;
+  outline: 0;
 }
-
-.s01 form .inner-form .input-field input:hover, .s01 form .inner-form .input-field input:focus {
+.bodyForm form .inner-form .input-field input:focus {
   box-shadow: none;
   outline: 0;
 }
 
-.s01 form .inner-form .input-field.first-wrap {
+.bodyForm form .inner-form .input-field.first-wrap {
   -ms-flex-positive: 1;
       flex-grow: 1;
   margin-right: 0;
 }
 
-.s01 form .inner-form .input-field.second-wrap {
+.bodyForm form .inner-form .input-field.second-wrap {
   width: 30.77%;
   min-width: 180px;
-  margin-right: 3rem;
+  margin-right: 2rem;
   margin-left: 0.5rem;
 }
 
-.s01 form .inner-form .input-field.third-wrap {
+.bodyForm form .inner-form .input-field.third-wrap {
   width: 180px;
   margin-right: 0;
 }
 
-.s01 form .inner-form .input-field.third-wrap .btn-search {
+.bodyForm form .inner-form .input-field.third-wrap .btn-search {
   height: 100%;
   width: 100%;
   background: #e94343;
@@ -97,47 +90,52 @@
 	border-radius: 2px;
 }
 
-.s01 form .inner-form .input-field.third-wrap .btn-search:hover {
+.bodyForm form .inner-form .input-field.third-wrap .btn-search:hover {
   background: #e9434396;
 }
 
 
 @media screen and (max-width: 992px) {
   
-  .s01 form .inner-form {
+  .bodyForm form .inner-form {
     padding: 20px 25px;
   }
-  .s01 form .inner-form .input-field {
+  .bodyForm form .inner-form .input-field {
     height: 50px;
   }
 }
 
 @media screen and (max-width: 767px) {
   
-  .s01 form .inner-form {
+  .bodyForm form .inner-form {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .s01 form .inner-form .input-field {
+  .bodyForm form .inner-form .input-field {
     margin-right: 0;
   }
-  .s01 form .inner-form .input-field input {
+  .bodyForm form .inner-form .input-field input {
     padding: 5px 15px;
     font-size: 16px;
+    text-align: center;
   }
-  .s01 form .inner-form .input-field.first-wrap {
+  .bodyForm form .inner-form .input-field.first-wrap {
     width: 100%;
     margin-bottom: 20px;
   }
-  .s01 form .inner-form .input-field.second-wrap {
-    width: calc(50% - 10px);
+  .bodyForm form .inner-form .input-field.second-wrap {
+    width: calc(70% - 10px);
     min-width: auto;
+    margin: 0 0 1rem;
   }
-  .s01 form .inner-form .input-field.third-wrap {
-    width: calc(50% - 10px);
+  .bodyForm form .inner-form .input-field.third-wrap {
+    width: calc(70% - 10px);
   }
-  .s01 form .inner-form .input-field.third-wrap .btn-search {
+  .bodyForm form .inner-form .input-field.third-wrap .btn-search {
     font-size: 16px;
   }
 }

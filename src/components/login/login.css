@@ -4,45 +4,20 @@
 	height: 100vh;
 	width: 100vw;
 }
-.form{
-  
-	margin: 0;
-	padding: 0;
-	background: #fff;
 
-	color: #fff;
-	font-family: Arial;
-	font-size: 18px;
-	width: 100vw;
-	height: 100vh;
-}
 
 .body_login{
 	position: absolute;
-	top: -0px;
-	left: -0px;
-	right: -0px;
-	bottom: -30px;
+	
 	width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgba(224, 105, 105, 0.5),rgba(226, 139, 117, 0.692)), url('https://www.cheapcaribbean.com/content/dam/CR_GUA_Main1_Beach_Cropped.jpg');
+  background-image: linear-gradient(rgba(226, 139, 117, 0.692),rgba(177, 175, 175, 0.5)), url('https://www.cheapcaribbean.com/content/dam/CR_GUA_Main1_Beach_Cropped.jpg');
   /*background-image: url(https://www.cheapcaribbean.com/content/dam/CR_GUA_Main1_Beach_Cropped.jpg);*/
 	background-size: cover;
-	
 	z-index: 0;
 }
 
-.grad{
-	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-	bottom: -40px;
-	width: 100%;
-  height: 100%;
-	z-index: 1;
-	opacity: 0.7;
-}
+
 
 .header{
 	position: absolute;
@@ -55,8 +30,8 @@
 	float: left;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
-	font-size: 2.18rem;
-  font-weight: 300;
+	font-size: 2.30rem;
+  font-weight: 350;
   
 }
 
@@ -76,15 +51,15 @@
 
 .login_form input[type=text], .login_form input[type=password]{
 	width: 15.62rem;
-	height: 1.87rem;
+	
 	background: transparent;
 	border: 1px solid rgb(255, 255, 255);
 	border-radius: 2px;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
 	font-size: 1rem;
-	font-weight: 400;
-	padding: 4px;
+	font-weight: 600;
+	padding: .53rem .93rem;
 }
 
 .login_form input[type=password]{
@@ -92,7 +67,7 @@
   margin-bottom: 10px;
 }
 
-.login_form input[type=button]{
+.login_form input[type=submit]{
 	width: 15.62rem;
 	height: 2.18rem;
   background: #e94343;
@@ -107,11 +82,11 @@
 	margin-top: 10px;
 }
 
-.login_form input[type=button]:hover{
+.login_form input[type=submit]:hover{
 	opacity: 0.8;
 }
 
-.login_form input[type=button]:active{
+.login_form input[type=submit]:active{
 	opacity: 0.6;
 }
 
@@ -125,7 +100,7 @@
 	border: 1px solid rgb(255, 255, 255);
 }
 
-.login_form input[type=button]:focus{
+.login_form input[type=submit]:focus{
 	outline: none;
 }
 

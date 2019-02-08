@@ -23,21 +23,25 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 .menu__name{
   font-size: 1.5rem;
 }
+
 .signup, .login{
-  border: 1px solid #fff;
 	
   border-radius: 2px;
   padding-left: 12px;
   padding-right: 12px;
 }
 
+.buton_logout{
+  border: none;
+  outline: none;
+  background-color: #e94343;
+}
 
 .links {
-  /* border: 1px solid #fff;   For debugging */
-  
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -50,16 +54,24 @@
 ul{
   list-style: none;
 }
-:link {
+:link,.buton_logout {
   text-decoration: none;
   transition: color .3s ease;
 
 }
-:link, :visited {
+:link, :visited,.buton_logout {
   color:white;
   text-decoration: none;
   font-size: 1.12rem;
 }
-.links :hover {
-  color: wheat;
+.links :hover,.buton_logout :hover{
+  color: rgb(245, 196, 106);
+  cursor: pointer;
+}
+.name:hover{
+  color: white;
+  cursor: default;
+}
+.name{
+  font-size: 1.1rem;
 }
