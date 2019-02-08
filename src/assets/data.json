@@ -199,13 +199,18 @@
   "users": [
     {
       "id": "1",
+      "username": "aramirez",
       "firstName": "Alvaro",
       "lastName": "Ramirez",
+      "password": "1234",
       "email": "alvaro.ramirez.seg@gmail.com",
       "photo": "",
       "likedPlaces": [
         "1",
         "4"
+      ],
+      "visitedPlaces": [
+        "1"
       ],
       "location": {
         "country": "Costa Rica",

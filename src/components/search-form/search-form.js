@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-console */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -19,60 +17,31 @@ class SearchForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
-
+  //Get input category value
   categoryChange(event) {
     this.setState({ category: event.target.value });
   }
-
+  //Get input location value
   countryChange(event) {
     this.setState({ country: event.target.value });
   }
-
+  //Click search button
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state.category);
-    console.log(this.state.country);
 
     this.props.onGetSearchPlaces(this.state.category,this.state.country);
     this.props.history.push('/explore');
-    /*
-    console.log(this.state.username + this.state.password) ;
-    event.preventDefault();
-    fetch('http://localhost:8080/v2/user/login', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body:JSON.stringify({
-
-        username: this.state.username,
-        password: this.state.password
-      })
-    })
-      .then((res) => res.json())
-      .then((data) => { 
-        localStorage.setItem('auth-token', JSON.stringify(data.token));
-        localStorage.setItem('username', JSON.stringify(data.username));
-        console.log(JSON.parse(localStorage.getItem('auth-token')));
-        this.props.onLogin();
-        this.props.history.push('/app');
-      })
-      .catch((err)=>console.log(err));
-      */
-    
   }
 
 
   render() {
 
     return (
-
-      
-
-      <div className="s01">
+      <div className="bodyForm">
         <form onSubmit={this.handleSubmit}>
           <div className="inner-form">
             <div className="input-field first-wrap">
-              
-              <input id="search" type="text" placeholder="ex: food, outdoors, events... " value={this.state.category} onChange={this.categoryChange}/>
+              <input id="search" type="text" placeholder="e.g., Food, Outdoors... " value={this.state.category} onChange={this.categoryChange}/>
             </div>
             <div className="input-field second-wrap">
               <input id="location" type="text" placeholder="Location" value={this.state.country} onChange={this.countryChange} />
@@ -95,7 +64,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onGetSearchPlaces: (category,country) => {
-      console.log(category);
       dispatch({ type: Actions.GET_SEARCH, payload: {category: category, location: country}});
     }
   };
@@ -103,7 +71,8 @@ const mapDispatchToProps = (dispatch) => {
 
 SearchForm.propTypes = {
   userLogin: PropTypes.string,
-  history: PropTypes.object
+  history: PropTypes.object,
+  onGetSearchPlaces: PropTypes.func
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchForm));

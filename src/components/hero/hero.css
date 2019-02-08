@@ -7,7 +7,6 @@
   /* Sizing */
   width: 100vw;
   height: 100vh;
-  
 
   display: flex;
   justify-content: center;
@@ -18,7 +17,7 @@
   color: white;
   
   /* Background styles */
-  background-image: linear-gradient(rgba(224, 105, 105, 0.5),rgba(226, 139, 117, 0.692)), url('../../assets/images/costaricamap.jpg');
+  background-image: linear-gradient(rgba(226, 139, 117, 0.692),rgba(177, 175, 175, 0.5)), url('../../assets/images/costaricamap.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -26,10 +25,7 @@
 }
 
 .hero h1 {
-  /* Text styles */
   font-size: 5em;
-  
-  /* Margins */
   margin-top: 0;
   margin-bottom: 0.5em;
 
@@ -39,7 +35,6 @@
 .hero h2{
   font-weight: 300;
 }
-
 
 
 @media screen and (max-width: 992px) {
@@ -58,7 +53,6 @@
     margin-right: 0.5rem;
   }
   
-  
 }
 
 @media screen and (max-width: 767px) {
@@ -76,8 +70,4 @@
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-
-  
-  
-
 }
