@@ -65,7 +65,8 @@ const PlaceReducer = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       searchedPlaces: newPlace,
-      showPlaces: newPlace
+      showPlaces: newPlace,
+      selectedIndexFilter: 0
     };
 
   case Actions.SET_FILTER:
