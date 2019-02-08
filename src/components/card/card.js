@@ -38,6 +38,11 @@ class Card extends Component {
     if(this.props.user.visitedPlaces.find(cat => cat === card.id)){ 
       visit_btn += ' active_visit';
     }
+    //Hide like button if not an user
+    if(this.props.user.id ===''){
+      visit_btn += ' hidden';
+      like_btn += ' hidden';
+    }
 
     return (
       <div className="results">

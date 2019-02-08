@@ -129,11 +129,10 @@
 .result_card .info_section .result_social ul li .btn_like_visit.active {
   color: #e94343; ;
 }
-.btn_like:focus {outline:0;}
-.result_card .info_section .result_social ul li .btn_like_visit.active_visit {
-  color: #4391e9; ;
-}
 
+.btn_like_visit.hidden {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   .result_header {
