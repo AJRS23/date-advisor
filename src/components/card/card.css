@@ -38,21 +38,29 @@
 /*Card header*/
 .result_card .info_section .result_header {
   position: relative;
-  padding: 25px;
+  padding: 23px;
   height: 40%;
 }
-.result_card .info_section .result_header h1 {
+.result_card .info_section .result_header h1 a{
   color: black;
   font-weight: 400;
+  font-size: 1.7rem;
 }
-.result_card .info_section .result_header h4 {
+.result_card .info_section .result_header h1 a:hover{
+  color: #e94343; 
+  
+}
+.result_card .info_section .result_header button h4 button {
   color: #555;
   font-weight: 400;
   max-height: 50px;
+  
 }
+
+
 .result_card .info_section .result_header .hour {
   display: inline-block;
-  margin-top: 13px;
+  margin-top: 1px;
   color: #555;
   padding: 5px;
   border-radius: 5px;
@@ -61,7 +69,7 @@
 .result_card .info_section .result_header .type {
   display: inline-block;
   color: #959595;
-  margin-top: 10px;
+  margin-top: 9px;
 }
 /*Card photos*/
 .result_card .info_section .result_header .result_photo {
@@ -127,7 +135,10 @@
 /*Button change colors*/
 .btn_like_visit:focus {outline:0;}
 .result_card .info_section .result_social ul li .btn_like_visit.active {
-  color: #e94343; ;
+  color: #e94343; 
+}
+.result_card .info_section .result_social ul li .btn_like_visit.active_visit {
+  color: #4386e9; 
 }
 
 .btn_like_visit.hidden {
